@@ -275,7 +275,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 `
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: '../img/balloon__close.svg',
+                iconImageHref: './img/balloon__close.svg',
                 iconImageSize: [15, 15],
                 iconImageOffset: [0, 0],
                 maxWidth: '345px'
