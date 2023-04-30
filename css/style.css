@@ -638,8 +638,9 @@ a:hover {
     line-height: 19px;
 }
 .variants__slide-img {
-    width: 134px;
-    height: 82px;
+    max-width: 134px;
+    width: 100%;
+    height: auto;
 }
 .variants__cards {
     display: none;
@@ -1233,8 +1234,7 @@ a:hover {
 
 @media (max-width: 1200px) {
     .variants__slide-img {
-        width: 100px;
-        height: 52px;
+        max-width: 100px;
     }
 }
 
@@ -1298,8 +1298,7 @@ a:hover {
         font-size: 14px;
     }
     .variants__slide-img {
-        width: 60px;
-        height: 32px;
+        max-width: 80px;
     }
     .calc__type-cards {
         gap: 10px;
@@ -1365,9 +1364,6 @@ a:hover {
     }
     .slide__bottom-btn {
         font-size: 14px;
-    }
-    .how {
-        height: 100%;
     }
     .how__house-card {
         min-width: 150px;
@@ -1511,6 +1507,9 @@ a:hover {
     .how__house-img,
     .section__subtitle {
         display: none;
+    }
+    .how {
+        height: 100%;
     }
     .how__house {
         display: flex;
@@ -1807,10 +1806,12 @@ a:hover {
         height: 7px;
     }
 }
-@media (max-width: 375px) {
+@media (max-width: 440px) {
     .variants__cards {
         grid-template-columns: 1fr 1fr;
     }
+}
+@media (max-width: 375px) {
     .calc__amount,
     .calc__type-cards {
         display: grid;
@@ -1828,5 +1829,17 @@ a:hover {
     }
     .footer .wrapper {
         justify-content: flex-start;
+    }
+}
+@media (max-width: 260px) {
+    .variants__cards {
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+    .variants__card {
+        max-width: 100%;
+    }
+    .variants__slide-content {
+        align-items: center;
     }
 }
