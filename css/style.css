@@ -108,6 +108,11 @@ a:hover {
     opacity: .3;
 }
 
+.animation-class {
+    transform: translate(0, 0) !important;
+    opacity: 1 !important;
+}
+
 /* Header start */
 
 .header__wrapper {
@@ -473,8 +478,7 @@ a:hover {
 .solutions__card {
     position: relative;
     max-width: 710px;
-    width: 49%;
-}
+    width: 49%;}
 .solutions__card-mark {
     position: absolute;
     top: -20px;
@@ -483,10 +487,12 @@ a:hover {
     display: block;
     padding: 10px;
     border-radius: 20px;
-    background: #D4D5F6;
+    background: #dce3ea;
 
     font-size: 16px;
     line-height: 19px;
+    transition: .2s ease all;
+
 }
 .solutions__card-content {
     display: flex;
@@ -496,6 +502,19 @@ a:hover {
     padding: 30px 20px;
     background: #fff;
     border-radius: 30px 30px 0 0;
+    border: 3px solid #dce3ea;
+    transition: .2s ease all;
+
+}
+.solutions__card-content:hover,
+.connection__card:hover {
+    border-color: #D4D5F6;
+}
+.solutions__card:hover .solutions__card-mark {
+    background: #D4D5F6;
+}
+.solutions__card:hover .solutions__card-bottom {
+    background: linear-gradient(266.63deg, #D7D8FF -81.89%, #8293EE 145.41%);
 }
 .solutions__card-punct {
     display: flex;
@@ -580,7 +599,8 @@ a:hover {
     height: 54px;
 
     border-radius: 0 0 30px 30px;
-    background: linear-gradient(266.63deg, #D7D8FF -81.89%, #8293EE 145.41%);
+    background: #dce3ea;
+    transition: .5s ease all;
 }
 .solutions__card-btn {
     display: block;
@@ -660,6 +680,9 @@ a:hover {
     width: 75%;
     top: 10%;
     right: -10%;
+
+    transform: translateX(100%);
+    transition: 1s ease all;
 }
 .calc {
     position: relative;
@@ -889,6 +912,8 @@ a:hover {
     padding: 25px;
     background: #fff;
     border-radius: 20px;
+    border: 3px solid transparent;
+    transition: .2s ease all;
 }
 .connection__card-num {
     position: absolute;
@@ -939,11 +964,20 @@ a:hover {
     border-radius: 10px;
     display: flex;
     gap: 10px;
+    opacity: 0;
+
+    transition: 1s ease all;
 }
 
 .interactive__card.card-1 {
     top: 0;
     left: 49%;
+}
+.card-left {
+    transform: translateX(-100%);
+}
+.card-right {
+    transform: translateX(100%);
 }
 .interactive__card.card-2 {
     top: 10%;
@@ -1066,9 +1100,11 @@ a:hover {
     height: 181px;
     background: #fff;
     border-radius: 20px;
+    opacity: 0;
 
     display: flex;
     gap: 10px;
+    transition: 1s ease all;
 }
 .guarantees__card-img-container {
     max-width: 190px;
@@ -1153,6 +1189,8 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+
+    overflow: hidden;
 }
 
 .answers__card {
@@ -1165,6 +1203,10 @@ a:hover {
 
     background: #fff;
     border-radius: 20px;
+
+    opacity: 0;
+    transform: translateY(-200%);
+    transition: 1s ease all;
 }
 .answers__card-title {
     font-family: 'Inter';

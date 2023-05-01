@@ -293,6 +293,28 @@ window.addEventListener('DOMContentLoaded', () => {
         map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
     }
 
+    // Interactive 
+
+    const houseBlock = document.querySelectorAll('.house__bg'),
+          interactiveCards = document.querySelectorAll('.interactive__card'),
+          guaranteesCards = document.querySelectorAll('.guarantees__card'),
+          answersCards = document.querySelectorAll('.answers__card');
+
+    const animationFunc = (elementsArray, animClass) => {
+        elementsArray.forEach(element => {
+            if (element.getBoundingClientRect().top <= 1000) {
+                element.classList.add(animClass);
+            };
+        });
+    };
+
+    window.addEventListener('scroll', () => {
+        animationFunc(houseBlock, 'animation-class');
+        animationFunc(interactiveCards, 'animation-class');
+        animationFunc(guaranteesCards, 'animation-class');
+        animationFunc(answersCards, 'animation-class');
+    });
+
     // Answers
 
     const answersBtns = document.querySelectorAll('.answers__btn-link');
